@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+  <appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="[%t] %msg%n"/>
+    </Console>
+    <Console name="LoggingSystem" target="SYSTEM_OUT">
+      <PatternLayout pattern="[%t] %msg%n"/>
+    </Console>
+    <File name="TupleSpace" fileName="logs/tuplespaces.log" append="false">
+      <PatternLayout pattern="[%t] %d{dd.mm.yyyy HH:mm:ss} - %msg%n"/>
+      
+    </File>
+    <File name="SocialStates" fileName="logs/socialStates.log" append="false">
+      <PatternLayout pattern="%d{HH:mm:ss} - %msg%n"/>
+      
+    </File>
+    <File name="Perceptions" fileName="logs/perceptions.log" append="false">
+      <PatternLayout pattern="[%t] %d{HH:mm:ss} - %msg%n"/>
+      
+    </File>
+    <File name="Protocol" fileName="logs/protocol.log" append="false">
+      <PatternLayout pattern="[%t] %d{HH:mm:ss} - %msg%n"/>
+     
+    </File>
+    <File name="Platform" fileName="logs/platform.log" append="false">
+      <PatternLayout pattern="[%t] %d{HH:mm:ss} - %msg%n"/>
+    </File>
+    
+  </appenders>
+  <loggers>
+    <logger name="twocomm.core.SocialState" level="trace" additivity="false">
+      <appender-ref ref="SocialStates"/>
+    </logger>
+    <logger name="twocomm.core" level="trace" additivity="false">
+      <appender-ref ref="Platform"/>
+    </logger>
+    <logger name="cartago.tools.AbstractTupleSpace" level="trace" additivity="false">
+      <appender-ref ref="TupleSpace"/>
+    </logger>
+    <logger name="twocomm.core.CommunicationArtifact" level="trace" additivity="false">
+      <appender-ref ref="Platform"/>
+    </logger>
+    <logger name="twocomm.core.typing.RoleRequirements" level="trace" additivity="false">
+      <appender-ref ref="Platform"/>
+    </logger>
+    <logger name="twocomm.core.ProtocolArtifact" level="trace" additivity="false">
+      <appender-ref ref="Protocol"/>
+    </logger>
+    <root level="trace">
+      <appender-ref ref="Console"/>
+    </root>
+  </loggers>
+</configuration>

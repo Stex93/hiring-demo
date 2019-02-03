@@ -1,0 +1,1293 @@
+[Thread-44] 10:07:58 - Registering Observer 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+
+
+[Thread-36] 10:07:59 - Adding commitment, cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL), time: 0
+[Thread-36] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+
+, time: 1
+[Thread-36] 10:07:59 - Adding commitment, cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL), time: 2
+[Thread-36] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+
+, time: 3
+[Thread-36] 10:07:59 - Adding commitment, cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL), time: 4
+[Thread-36] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+
+, time: 5
+[Thread-28] 10:07:59 - Adding commitment, cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL), time: 6
+[Thread-28] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+
+, time: 7
+[Thread-28] 10:07:59 - Adding commitment, cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL), time: 8
+[Thread-28] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+
+, time: 9
+[Thread-28] 10:07:59 - Adding commitment, cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL), time: 10
+[Thread-28] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+
+, time: 11
+[Thread-37] 10:07:59 - Adding commitment, cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL), time: 12
+[Thread-37] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+
+, time: 13
+[Thread-37] 10:07:59 - Adding commitment, cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL), time: 14
+[Thread-37] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+
+, time: 15
+[Thread-37] 10:07:59 - Adding commitment, cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL), time: 16
+[Thread-37] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+
+, time: 17
+[Thread-32] 10:07:59 - Adding commitment, cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL), time: 18
+[Thread-32] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL)
+
+
+, time: 19
+[Thread-32] 10:07:59 - Adding commitment, cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL), time: 20
+[Thread-32] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL)
+
+
+, time: 21
+[Thread-32] 10:07:59 - Adding commitment, cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL), time: 22
+[Thread-32] 10:07:59 - 
+FACTS:
+------------------
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+, time: 23
+[Thread-43] 10:08:03 - Update Commitment began, cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), CONDITIONAL), status: DETACHED
+[Thread-43] 10:08:03 - 
+FACTS:
+------------------
+- openPosition(boss1)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), DETACHED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-29] 10:08:07 - Update Commitment began, cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), DETACHED), status: SATISFIED
+[Thread-29] 10:08:07 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-34] 10:08:09 - Update Commitment began, cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), CONDITIONAL), status: DETACHED
+[Thread-34] 10:08:09 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-34] 10:08:09 - Update Commitment began, cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), CONDITIONAL), status: DETACHED
+[Thread-34] 10:08:09 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), DETACHED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-43] 10:08:10 - Update Commitment began, cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), CONDITIONAL), status: DETACHED
+[Thread-43] 10:08:10 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), DETACHED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-43] 10:08:10 - Update Commitment began, cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), CONDITIONAL), status: DETACHED
+[Thread-43] 10:08:10 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), DETACHED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-29] 10:08:12 - Update Commitment began, cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), CONDITIONAL), status: DETACHED
+[Thread-29] 10:08:12 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), DETACHED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-29] 10:08:12 - Update Commitment began, cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), CONDITIONAL), status: DETACHED
+[Thread-29] 10:08:12 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), DETACHED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-38] 10:08:15 - Update Commitment began, cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), DETACHED), status: SATISFIED
+[Thread-38] 10:08:15 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL)
+
+
+
+[Thread-38] 10:08:15 - Update Commitment began, cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), CONDITIONAL), status: DETACHED
+[Thread-38] 10:08:15 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), DETACHED)
+
+
+
+[Thread-32] 10:08:20 - Update Commitment began, cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), DETACHED), status: SATISFIED
+[Thread-32] 10:08:20 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-45] 10:08:23 - Update Commitment began, cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), DETACHED), status: SATISFIED
+[Thread-45] 10:08:23 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-36] 10:08:24 - Update Commitment began, cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), DETACHED), status: SATISFIED
+[Thread-36] 10:08:24 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-36] 10:08:24 - Update Commitment began, cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), DETACHED), status: SATISFIED
+[Thread-36] 10:08:24 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-30] 10:08:24 - Update Commitment began, cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), CONDITIONAL), status: TERMINATED
+[Thread-30] 10:08:24 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-30] 10:08:24 - Commitment released, cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+[Thread-44] 10:08:27 - Update Commitment began, cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), DETACHED), status: SATISFIED
+[Thread-44] 10:08:27 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-44] 10:08:27 - Update Commitment began, cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), CONDITIONAL), status: DETACHED
+[Thread-44] 10:08:27 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), DETACHED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-39] 10:08:28 - Update Commitment began, cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), DETACHED), status: SATISFIED
+[Thread-39] 10:08:28 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+- responseYes(candidate8)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), SATISFIED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-47] 10:08:32 - Update Commitment began, cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), DETACHED), status: SATISFIED
+[Thread-47] 10:08:32 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+- responseYes(candidate8)
+- offerAccepted(evaluator5)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), SATISFIED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), SATISFIED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-47] 10:08:32 - Update Commitment began, cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), CONDITIONAL), status: DETACHED
+[Thread-47] 10:08:32 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+- responseYes(candidate8)
+- offerAccepted(evaluator5)
+- offerAccepted(evaluator)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), DETACHED)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), SATISFIED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), SATISFIED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-47] 10:08:32 - Update Commitment began, cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), CONDITIONAL), status: DETACHED
+[Thread-47] 10:08:32 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+- responseYes(candidate8)
+- offerAccepted(evaluator5)
+- offerAccepted(evaluator)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), DETACHED)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), DETACHED)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), SATISFIED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), SATISFIED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-46] 10:08:37 - Update Commitment began, cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), DETACHED), status: SATISFIED
+[Thread-46] 10:08:37 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+- responseYes(candidate8)
+- offerAccepted(evaluator5)
+- offerAccepted(evaluator)
+- positionFilled(hirer2)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), DETACHED)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), SATISFIED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), SATISFIED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+
+[Thread-46] 10:08:37 - Update Commitment began, cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), DETACHED), status: SATISFIED
+[Thread-46] 10:08:37 - 
+FACTS:
+------------------
+- openPosition(boss1)
+- postJob(hirer2)
+- apply(candidate9)
+- checkPosition(evaluator7)
+- apply(candidate6)
+- apply(candidate8)
+- screenInterview(evaluator7)
+- makeOffer(evaluator7)
+- checkPosition(evaluator4)
+- checkPosition(evaluator5)
+- responseNo(candidate9)
+- screenInterview(evaluator4)
+- offerRejected(evaluator7)
+- screenInterview(evaluator5)
+- msgRejectionNotice(evaluator4)
+- makeOffer(evaluator5)
+- responseYes(candidate8)
+- offerAccepted(evaluator5)
+- offerAccepted(evaluator)
+- positionFilled(hirer2)
+
+COMMITMENTS:
+------------------
+- cc(hirer2, evaluator, offerAccepted(evaluator), (offerAccepted(evaluator) THEN positionFilled(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, openPosition(boss1), (openPosition(boss1) THEN postJob(hirer2)), SATISFIED)
+
+- cc(hirer2, boss1, (postJob(hirer2) THEN (offerAccepted(evaluator) OR timeout3months(hirer2))), (postJob(hirer2) THEN ((offerAccepted(evaluator) THEN positionFilled(hirer2)) OR (timeout3months(hirer2) THEN positionAbandoned(hirer2)))), SATISFIED)
+
+- cc(evaluator4, hirer2, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator4)) OR ((checkPosition(evaluator4) THEN msgPositionClosed(evaluator4)) OR (checkPosition(evaluator4) THEN (screenInterview(evaluator4) THEN (msgRejectionNotice(evaluator4) OR (makeOffer(evaluator4) THEN ((responseYes(candidate6) THEN offerAccepted(evaluator4)) OR (responseNo(candidate6) THEN offerRejected(evaluator4))))))))))), SATISFIED)
+
+- cc(evaluator4, candidate6, (postJob(hirer2) THEN apply(candidate6)), (postJob(hirer2) THEN (apply(candidate6) THEN (msgPositionClosed(evaluator4) OR (msgRejectionNotice(evaluator4) OR makeOffer(evaluator4))))), SATISFIED)
+
+- cc(candidate6, evaluator4, makeOffer(evaluator4), (makeOffer(evaluator4) THEN (responseYes(candidate6) OR responseNo(candidate6))), TERMINATED)
+
+- cc(evaluator5, hirer2, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator5)) OR ((checkPosition(evaluator5) THEN msgPositionClosed(evaluator5)) OR (checkPosition(evaluator5) THEN (screenInterview(evaluator5) THEN (msgRejectionNotice(evaluator5) OR (makeOffer(evaluator5) THEN ((responseYes(candidate8) THEN offerAccepted(evaluator5)) OR (responseNo(candidate8) THEN offerRejected(evaluator5))))))))))), SATISFIED)
+
+- cc(evaluator5, candidate8, (postJob(hirer2) THEN apply(candidate8)), (postJob(hirer2) THEN (apply(candidate8) THEN (msgPositionClosed(evaluator5) OR (msgRejectionNotice(evaluator5) OR makeOffer(evaluator5))))), SATISFIED)
+
+- cc(candidate8, evaluator5, makeOffer(evaluator5), (makeOffer(evaluator5) THEN (responseYes(candidate8) OR responseNo(candidate8))), SATISFIED)
+
+- cc(evaluator7, hirer2, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN ((positionFilled(hirer2) THEN msgPositionClosed(evaluator7)) OR ((checkPosition(evaluator7) THEN msgPositionClosed(evaluator7)) OR (checkPosition(evaluator7) THEN (screenInterview(evaluator7) THEN (msgRejectionNotice(evaluator7) OR (makeOffer(evaluator7) THEN ((responseYes(candidate9) THEN offerAccepted(evaluator7)) OR (responseNo(candidate9) THEN offerRejected(evaluator7))))))))))), SATISFIED)
+
+- cc(evaluator7, candidate9, (postJob(hirer2) THEN apply(candidate9)), (postJob(hirer2) THEN (apply(candidate9) THEN (msgPositionClosed(evaluator7) OR (msgRejectionNotice(evaluator7) OR makeOffer(evaluator7))))), SATISFIED)
+
+- cc(candidate9, evaluator7, makeOffer(evaluator7), (makeOffer(evaluator7) THEN (responseYes(candidate9) OR responseNo(candidate9))), SATISFIED)
+
+
+

@@ -1,0 +1,31 @@
+
+mas hiring {
+    
+    agent bo : boss.asl {
+    	focus : workspaceManager
+    }
+    
+    agent hi : hirer.asl {
+    	focus : workspaceManager
+    }
+    
+    agent ev : evaluator.asl {
+    	instances: 3
+    	focus : workspaceManager
+    }
+    
+    agent ca : candidate.asl {
+    	instances: 3
+    	focus : workspaceManager
+    }
+    
+    workspace default {
+    	artifact workspaceManager : hiring.WorkspaceManager()
+    }
+    
+    
+    class-path: lib, res                 // java class path
+    
+    asl-path:   src/agt, src/agt/inc     // agent source path  
+
+}
